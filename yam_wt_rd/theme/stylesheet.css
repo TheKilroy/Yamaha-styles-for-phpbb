@@ -1,0 +1,138 @@
+/*  phpBB3 Style Sheet
+    --------------------------------------------------------------
+	Style name:			Yamaha White/Red
+	Based on style:		prosilver (the default phpBB 3.3.x style)
+	Original author:	Tom Beddard ( http://www.subblue.com/ )
+	Modified by:		Kilroy ( http://www.rd350lc.de )
+    --------------------------------------------------------------
+*/
+
+/*
+--------------------------------------------------------------
+Colours and backgrounds for common.css
+
+Yamaha Colors
+
+white:		#000000ff
+dark red:	#6e2b2fff
+light red:	#e33936ff
+-------------------------------------------------------------- */
+
+:root {
+	--color_yam_tank0: #ffffff;		/* This is the tank base color */
+	--color_yam_tank1: #6e2b2f;		/* This is the tank darkest color */
+	--color_yam_tank2: #e33936;		/* This is the tank lighter color */
+	--color_yam_tank3: #ffffff;		/* This is the tank lightest color */
+	--color_yam_tank4: #000000;		/* This is the tank border color */
+	
+	--gradient_yam_tank: linear-gradient(to bottom, var(--color_yam_tank2) 0%, var(--color_yam_tank1) 100%);
+	--wk_gradient_yam_tank: linear-gradient(to bottom, var(--color_yam_tank2) 0%, var(--color_yam_tank1) 100%);
+}
+
+/* colours.css changes */
+html, body {
+	background-color: #ACA8A1;
+}
+
+body.simple {
+	min-height: 100%;
+	padding: 0 5px;
+}
+
+.wrap {
+	background-color: var(--color_yam_tank0);
+	border: 2px solid var(--color_yam_tank4);
+	border-radius: 15px;
+	box-shadow: 0 0 5px 2px #9D9A93, inset 0 3px 18px rgba(100, 100, 100, .25);
+	margin: 0 auto;
+	max-width: 90%;
+	padding: 13px 23px;
+}
+
+.search-header {
+	box-shadow: 0 0 10px #505C65;
+}
+
+.headerbar {
+	background-color: #7C8891;
+	background-image: var(--wk_gradient_yam_tank);
+	background-image: var(--gradient_yam_tank);
+	background-repeat: repeat-x;
+	border-top-color: var(--color_yam_tank2);
+	border-bottom-color: var(--color_yam_tank1);
+}
+
+.navbar {
+	background-color: #DCDEE2;
+}
+
+.forabg, .forumbg {
+	background-color: var(--color_yam_tank2)%;
+	background-image: -webkit-linear-gradient(top, #6ACEFF 0%, #0076B1 2px, #12A3EB 92px, #12A3EB 100%);
+	background-image: var(--gradient_yam_tank);
+	background-repeat: repeat-x;
+}
+
+.copyright a {
+	color: #000000 !important;
+}
+
+li.row {
+	background-color: #E8ECEE;
+}
+
+li.row:hover {
+	background-color: #EBEFF1;
+}
+
+li.row.bg3 {
+	background-color: #F0F4F6;
+}
+
+li.row.bg3:hover {
+	background-color: #F4F8FA;
+}
+
+.site_logo {
+	background-image: url("./images/yamaha-red-100.png");
+	width: 100px;
+	height: 100px;
+}
+
+.jumpbox-cat-link {
+	background-color: #505C65;
+	background-image: -moz-linear-gradient(top, #7C8891 0%, #7C8790 4%, #76828B 10%, #5B666F 29%, #505C65 38%, #505C65 100%);
+	background-image: linear-gradient(to bottom, #7C8891 0%, #7C8790 4%, #76828B 10%, #5B666F 29%, #505C65 38%,#505C65 100%);
+	background-repeat: repeat-x;
+	color: #FFFFFF;
+}
+
+.jumpbox-sub-link {
+	background-color: #E8ECEE;
+}
+
+/* responsive.css changes */
+@media only screen and (max-width: 920px), only screen and (max-device-width: 920px) {
+	html, body {
+		background-color: #FFF;
+	}
+
+	body {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+
+	#wrap {
+		width: 850px;
+		padding: 0;
+		border-width: 0;
+		border-radius: 0;
+		box-shadow: none;
+	}
+}
+
+@media only screen and (max-width: 860px), only screen and (max-device-width: 860px) {
+	#wrap {
+		width: auto;
+	}
+}
